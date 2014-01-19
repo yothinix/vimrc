@@ -1,6 +1,5 @@
 " Add this line.
 call pathogen#infect()
-
 set number
 
 " You probably already have these lines. Add them if not:
@@ -35,7 +34,7 @@ call vundle#rc()
  Bundle 'gmarik/vundle'
 
  " My Bundles here:
- Bundle 'ctrlp'
+ Bundle 'kien/ctrlp.vim'
  Bundle 'vim-easymotion'
  Bundle 'gmarik/ingretu'
  Bundle 'bogado/file-line'
@@ -43,6 +42,8 @@ call vundle#rc()
  Bundle 'Raimondi/delimitMate'
  Bundle 'ervandew/supertab'
  Bundle 'mihaifm/vimpanel'
+ Bundle 'altercation/vim-colors-solarized'
+
  "
  " original repos on github
  Bundle 'tpope/vim-fugitive'
@@ -76,7 +77,7 @@ let g:ctrlp_map = '<c-p>'
 
 " color codeschool
 " color candystripe
-color darkmate
+color solarized
 " set guifont=Monaco:h12
 
 autocmd User Rails let b:surround_{char2nr('-')} = "<% \r %>" " displays <% %> correctly
@@ -91,6 +92,8 @@ set guifont=Consolas\ for\ Powerline\ FixedD:h10:cANSI
 set t_Co=256
 let g:Powerline_symbols = "fancy"
 "anti menu garbled
+"if syntastic/fugitive statusline flag don't work!
+" :PowerlineClearCache and restart vim
 
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 
