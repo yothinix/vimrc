@@ -1,5 +1,4 @@
 " Add this line.
-call pathogen#infect()
 set number
 
 " You probably already have these lines. Add them if not:
@@ -7,15 +6,9 @@ syntax on
 filetype plugin indent on
 set incsearch hlsearch 
 
-"NERDTree setting group
-"autocmd vimenter * NERDTree 
-"let g:NERDTreeWinPos = "right"
-"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-
 set guioptions-=T " Removes top toolbar
 set guioptions-=r " Removes right hand scroll bar
 set go-=L " Removes left hand scroll bar
-
 
 set nocompatible               " be iMproved
 filetype off                   " required!
@@ -43,6 +36,7 @@ call vundle#rc()
  Bundle 'ervandew/supertab'
  Bundle 'mihaifm/vimpanel'
  Bundle 'altercation/vim-colors-solarized'
+ Bundle 'Lokaltog/vim-powerline'
 
  "
  " original repos on github
@@ -54,12 +48,6 @@ call vundle#rc()
  Bundle 'L9'
  Bundle 'FuzzyFinder'
  
- " non github repos
- " Bundle 'git://git.wincent.com/command-t.git'
- " git repos on your local machine (ie. when working on your own plugin)
- " Bundle 'file:///Users/gmarik/path/to/plugin'
- " ...
-
  filetype plugin indent on     " required!
  "
  " Brief help
@@ -78,7 +66,7 @@ let g:ctrlp_map = '<c-p>'
 " color codeschool
 " color candystripe
 color solarized
-" set guifont=Monaco:h12
+set background=dark
 
 autocmd User Rails let b:surround_{char2nr('-')} = "<% \r %>" " displays <% %> correctly
 :set cpoptions+=$ " puts a $ marker for the end of words/lines in cw/c$ commands 
@@ -88,12 +76,22 @@ let g:EasyMotion_leader_key = '<Leader>'
 "Powerline configuration
 set encoding=utf-8
 set laststatus=2
-set guifont=Consolas\ for\ Powerline\ FixedD:h10:cANSI
+set guifont=Monaco\ for\ Powerline
 set t_Co=256
 let g:Powerline_symbols = "fancy"
 "anti menu garbled
 "if syntastic/fugitive statusline flag don't work!
 " :PowerlineClearCache and restart vim
+"
+"for font-patching use this tutorial on Linux
+"https://powerline.readthedocs.org/en/latest/fontpatching.html
+"
+" 1)apt-get install python-fontforge
+" 2)add Bundle 'Lokaltog/vim-powerline'
+" 3)Download Monaco.ttf from http://www.fontyukle.net/en/Monaco.ttf
+" 4)use fontpatcher in Bundle directory to patch the Monaco font
+" 5)cp patched font into ~/.fonts
+" 6)fc-cache -vf ~/.fonts
 
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 
