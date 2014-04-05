@@ -1,8 +1,7 @@
 " Add this line.
 set number
 
-" You probably already have these lines. Add them if not:
-syntax on
+" You probably already have these lines. Add them if not: syntax on
 filetype plugin indent on
 set incsearch hlsearch 
 
@@ -13,11 +12,11 @@ set go-=L " Removes left hand scroll bar
 set nocompatible               " be iMproved
 filetype off                   " required!
 
-inoremap <Up> <NOP>
-inoremap <Down> <NOP>
-inoremap <Left> <NOP>
-inoremap <Right> <NOP>
-nnoremap <CR> :noh<CR>
+" noremap <Up> <NOP>
+" noremap <Down> <NOP>
+" noremap <Left> <NOP>
+" noremap <Right> <NOP>
+" noremap <CR> :noh<CR>
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -33,10 +32,18 @@ call vundle#rc()
  Bundle 'bogado/file-line'
  Bundle 'yearofmoo/Vim-Darkmate'
  Bundle 'Raimondi/delimitMate'
+ Bundle 'chriskempson/vim-tomorrow-theme'
  Bundle 'ervandew/supertab'
  Bundle 'mihaifm/vimpanel'
  Bundle 'altercation/vim-colors-solarized'
  Bundle 'Lokaltog/vim-powerline'
+ Bundle 'tpope/vim-vividchalk'
+ Bundle 'jelera/vim-javascript-syntax'
+ Bundle 'takac/vim-hardtime'
+ Bundle 'junegunn/seoul256.vim'
+ Bundle '29decibel/codeschool-vim-theme'
+ Bundle 'vim-scripts/Wombat'
+ Bundle 'modess/vim-phpcolors'
 
  "
  " original repos on github
@@ -65,8 +72,12 @@ let g:ctrlp_map = '<c-p>'
 
 " color codeschool
 " color candystripe
-color solarized
-set background=dark
+" color solarized
+" set background=dark
+color vividchalk
+" color Tomorrow-Night 
+" color seoul256
+" color wombat
 
 autocmd User Rails let b:surround_{char2nr('-')} = "<% \r %>" " displays <% %> correctly
 :set cpoptions+=$ " puts a $ marker for the end of words/lines in cw/c$ commands 
@@ -105,7 +116,7 @@ set directory=~/vimfiles/swp//
 set backupdir=~/vimfiles/backup//
 
 " Autosave when not focus on VIM"
-:au FocusLost * silent! wa
+au FocusLost * silent! wa
 
 " Vimpanel setting group
 " ===== Vimpanel usage command =====
@@ -114,3 +125,4 @@ set backupdir=~/vimfiles/backup//
 " VimpanelEdit   {Name} //To edit panel directory list
 "
 noremap v :VimpanelLoad<Space>mypanel<CR>
+au FileType javascript call JavaScriptFold()
