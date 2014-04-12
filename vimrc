@@ -44,6 +44,10 @@ call vundle#rc()
  Bundle '29decibel/codeschool-vim-theme'
  Bundle 'vim-scripts/Wombat'
  Bundle 'modess/vim-phpcolors'
+ Bundle 'scrooloose/nerdcommenter'
+ Bundle 'tomasr/molokai'
+ Bundle 'vim-scripts/repmo.vim'
+ Bundle 'nanotech/jellybeans.vim'
 
  "
  " original repos on github
@@ -73,8 +77,10 @@ let g:ctrlp_map = '<c-p>'
 " color codeschool
 " color candystripe
 " color solarized
-" set background=dark
-color vividchalk
+color molokai
+set background=dark
+" color jellybeans
+" color vividchalk
 " color Tomorrow-Night 
 " color seoul256
 " color wombat
@@ -126,3 +132,7 @@ au FocusLost * silent! wa
 "
 noremap v :VimpanelLoad<Space>mypanel<CR>
 au FileType javascript call JavaScriptFold()
+
+if &diff
+    colorscheme jellybeans
+endif
