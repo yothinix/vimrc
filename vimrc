@@ -120,7 +120,7 @@ set autoindent
 " Move .swp file to fixed directory"
 set directory=~/vimfiles/swp//
 set backupdir=~/vimfiles/backup//
-
+set nobackup
 " Autosave when not focus on VIM"
 au FocusLost * silent! wa
 
@@ -130,8 +130,8 @@ au FocusLost * silent! wa
 " VimpanelLoad   {Name} //To load panel
 " VimpanelEdit   {Name} //To edit panel directory list
 "
-noremap v :VimpanelLoad<Space>mypanel<CR>
-au FileType javascript call JavaScriptFold()
+" noremap v :VimpanelLoad<Space>mypanel<CR>
+" au FileType javascript call JavaScriptFold()
 
 if &diff
     colorscheme jellybeans
