@@ -12,12 +12,6 @@ set go-=L " Removes left hand scroll bar
 set nocompatible               " be iMproved
 filetype off                   " required!
 
-" noremap <Up> <NOP>
-" noremap <Down> <NOP>
-" noremap <Left> <NOP>
-" noremap <Right> <NOP>
-" noremap <CR> :noh<CR>
-
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
@@ -48,6 +42,8 @@ call vundle#rc()
  Bundle 'tomasr/molokai'
  Bundle 'vim-scripts/repmo.vim'
  Bundle 'nanotech/jellybeans.vim'
+ Bundle 'fatih/vim-go'
+ Bundle 'groenewege/vim-less'
 
  "
  " original repos on github
@@ -136,3 +132,7 @@ au FocusLost * silent! wa
 if &diff
     colorscheme jellybeans
 endif
+
+"autocmd FileType go compiler golang
+"let g:golang_goroot = "/usr/local/go"
+let g:go_disable_autoinstall = 1
