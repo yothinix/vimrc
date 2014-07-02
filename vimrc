@@ -44,6 +44,7 @@ call vundle#rc()
  Bundle 'nanotech/jellybeans.vim'
  Bundle 'fatih/vim-go'
  Bundle 'groenewege/vim-less'
+ Bundle 'scrooloose/nerdtree'
 
  "
  " original repos on github
@@ -136,3 +137,7 @@ endif
 "autocmd FileType go compiler golang
 "let g:golang_goroot = "/usr/local/go"
 let g:go_disable_autoinstall = 1
+
+" Add Nerdtree when start
+autocmd vimenter * if !argc() | NERDTree | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
