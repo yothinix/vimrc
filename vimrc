@@ -45,6 +45,7 @@ call vundle#rc()
  Bundle 'fatih/vim-go'
  Bundle 'groenewege/vim-less'
  Bundle 'scrooloose/nerdtree'
+ Bundle 'Glench/Vim-Jinja2-Syntax'
 
  "
  " original repos on github
@@ -141,3 +142,5 @@ let g:go_disable_autoinstall = 1
 " Add Nerdtree when start
 autocmd vimenter * if !argc() | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+autocmd FileType html setlocal shiftwidth=2 tabstop=2
+autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
