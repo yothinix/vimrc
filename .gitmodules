@@ -1,0 +1,24 @@
+[submodule "bundle/molokai"]
+    path   = vim_bundle/bundle/molokai
+    url    = git://github.com/tomasr/molokai.git
+    ignore = dirty
+
+[submodule "bundle/molokai"]
+    path   = vim_bundle/bundle/vim-hardtime
+    url    = git://github.com/takac/vim-hardtime.git
+    ignore = dirty
+
+[submodule "bundle/powerline"]
+    path   = vim_bundle/bundle/vim-powerline
+    url    = git://github.com/Lokaltog/vim-powerline.git
+    ignore = dirty
+
+[submodule "bundle/vimpanel"]
+    path   = vim_bundle/bundle/vimpanel
+    url    = git://github.com/mihaifm/vimpanel.git
+    ignore = dirty
+
+[submodule "bundle/sparkup"]
+    path   = vim_bundle/bundle/sparkup
+    url    = git://github.com/rstacruz/sparkup.git
+    ignore = dirty
