@@ -139,8 +139,11 @@ endif
 "let g:golang_goroot = "/usr/local/go"
 let g:go_disable_autoinstall = 1
 
+autocmd FileType html setlocal shiftwidth=2 tabstop=2
+autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
+
 " Add Nerdtree when start
 autocmd vimenter * if !argc() | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-autocmd FileType html setlocal shiftwidth=2 tabstop=2
-autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
+" NERDTree shotcut via ctrl-n
+map <C-n> :NERDTreeToggle<CR>
