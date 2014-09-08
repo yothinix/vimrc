@@ -22,3 +22,15 @@
     path   = vim_bundle/bundle/sparkup
     url    = git://github.com/rstacruz/sparkup.git
     ignore = dirty
+
+[submodule "bundle/FuzzyFinder"]
+    path   = vim_bundle/bundle/FuzzyFinder
+    ignore = dirty
+
+[submodule "bundle/L9"]
+    path   = vim_bundle/bundle/L9
+    ignore = dirty
+
+[submodule "bundle/vim-go"]
+    path   = vim_bundle/bundle/vim-go
+    ignore = dirty
